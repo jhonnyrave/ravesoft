@@ -1,0 +1,147 @@
+<div class="row small-padding">
+    <div class="col-md-6 no-padding">
+        <!-- MULTISELECT -->
+        <form class="form" role="form" name='frm' id='frm-general'>
+            <div class="card">
+                <div class="card-head">
+                    <header><i class="fa fa-pencil"></i> Administrador de aplicaciones</header>
+                </div>
+                <div class="card-body">
+                    <fieldset>
+                        <div class="form-group floating-label">
+                            <input type="text" class="form-control" id="programa" name='programa'>
+                            <label for="programa" class="col-sm-3 control-label">Programa</label>
+                        </div>
+                        <div class="form-group floating-label">
+                            <input type="text" class="form-control" id="descripcion" name='descripcion'>
+                            <label for="descripcion" class="col-sm-3 control-label">Descripcion</label>
+
+                        </div>
+                        <div class="form-group floating-label">
+                            <select class="form-control select2" id="menu-programa" name='menu'></select>
+                            <label for="menu" class="col-sm-3 control-label">Menu</label>
+                        </div>
+                    </fieldset>
+                    <fieldset id='fieldset-nueva-aplicacion'>
+                        <legend>
+                            <div class="checkbox checkbox-styled">
+                                <label><input type="checkbox" name='controladorJs' value='S' checked> Controlador
+                                    Javascript</label>
+                            </div>
+                        </legend>
+                        <div class="form-group floating-label">
+                            <input type="text" class="form-control" id="funcionesJs" name='funcionesJs'>
+                            <label for="funcionesJs" class="col-sm-3 control-label">Funciones</label>
+
+                        </div>
+
+                        <!--<legend><div class="checkbox checkbox-styled">
+                            <label><input type="checkbox" name='controladorXajax' value='S'> Controlador Xajax</label>
+                        </div></legend>
+                        <div class="form-group floating-label">
+                            <input type="text" class="form-control" id="funcionesXajax" name='funcionesXajax'>
+                            <label for="funcionesXajax" class="col-sm-3 control-label">Funciones</label>
+
+                        </div>
+                        -->
+                    </fieldset>
+                    <!--<div class="form-group floating-label">
+                        <input type="text" class="form-control" id="xajaxDefault" name='xajaxDefault'/>
+                        <label for="xajaxDefault" class="col-sm-3 control-label">xajax inicio</label>
+                    </div>-->
+                    <div class="form-group">
+                        <div class="checkbox checkbox-styled">
+                            <label class="col-sm-6 control-label">
+                                <input type="checkbox" name="autenticado" id="autenticado" value='S' checked="true">
+                                <span>Requiere Autenticaci&oacute;n</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class='card-actionbar'>
+                    <div class='card-actionbar-row'>
+                        <a class="btn btn-primary ink-reaction" id='btn-grabar-general'><i class="fa fa-floppy-o"></i>
+                            Grabar programa</a>
+                        <!--<a class="btn btn-success ink-reaction" id='btn-publicar-programa'><i class="fa fa-cloud-upload" ></i> Publicar</a>-->
+                        <a class="btn btn-danger ink-reaction" id='btn-eliminar-general'><i class="fa fa-trash-o"></i>
+                            Eliminar</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="card">
+            <div class="card-head">
+                <header>Grupos asignados al programa</header>
+            </div>
+            <div class="card-body">
+                <table class="table table-striped table-hover">
+                    <thead>
+                    <th>Grupo</th>
+                    <th>Usuarios</th>
+                    </thead>
+                    <tbody class="tr-programa-grupo">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <!-- MULTISELECT -->
+        <form class="form-horizontal label-left" role="form" name='frm' id='frm-permisos'>
+            <div class="card">
+                <div class="card-head">
+                    <header><i class="fa fa-list"></i> Permisos de programa</header>
+                </div>
+                <div class="card-body">
+                    <table class="table table-condensed table-dark-header">
+                        <thead>
+                        <tr>
+                            <th>C&oacute;digo</th>
+                            <th>Descripci&oacute;n</th>
+                            <th>Sensible</th>
+                            <th>Acci&oacute;n</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" name='permiso[]' value='A' size=2></td>
+                            <td><input type="text" class="form-control" name='descripcion[]' value='Acceso a la aplicacion'></td>
+                            <td><input type='checkbox' class='form-control' name='sensible[]' value='S' ></td>
+                            <td><button type='button' class='btn ink-reaction btn-group-user' href='#' title="Grupos con permiso a esta opcion" ><i class='fa fa-group'></i></button></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class='card-actionbar'>
+                    <div class='card-actionbar-row'>
+                        <a class="btn btn-success ink-reaction" id='btn-agregar-permiso'><i class="fa fa-plus"></i>
+                            Agregar</a>
+                        <a class="btn btn-primary ink-reaction" id='btn-grabar-permisos'><i class="fa fa-floppy-o"></i>
+                            Grabar</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-6">
+        <form class="form-horizontal label-left" role="form" name='frm' id='frm-componentes'>
+            <div class="card small-padding">
+                <div class="card-head">
+                    <header><i class="fa fa-puzzle-piece"></i> Componentes</header>
+                    <a href="http://10.0.2.31/demo/html/dashboards/dashboard.html" target="_blank"><i
+                            class='fa fa-external-link '></i> Ver demo</a>
+                    <a href="http://10.0.2.31/demo/docs/getting-start.html" target="_blank"><i class='fa fa-book'></i>
+                        Ver documentacion</a>
+                </div>
+                <div class="card-body" style="height: 300px;overflow-y: scroll;">
+                </div>
+                <div class='card-actionbar'>
+                    <div class='card-actionbar-row'>
+                        <a class="btn btn-info ink-reaction" id='btn-grabar-componentes'><i class="fa fa-floppy-o"></i>
+                            Grabar componentes</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
