@@ -7,10 +7,10 @@ include_once(APP_BUSINESS."mainBusiness.php");
 include_once(APP_CONTROLLERS."mainController.php");
 include_once(APP_TEMPLATE."mainTemplate.php");
 
-
+die('holaaaa');
 // Sanitizar parámetros GET
 $Core = new mainController();
-die('holaaaa');
+
 $_REQUEST = $Core->sanitize($_REQUEST);
 
 $tipo = isset($_REQUEST['tipo']) ? $_REQUEST['tipo'] : '';
