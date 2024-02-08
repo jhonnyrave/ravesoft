@@ -21,7 +21,6 @@ define("PATH_DIRECTORIO",PATH_RAIZ.DIRECTORIO);
 
 $file=CORE.$_SERVER['SERVER_NAME'].".ini";
 if(!isset($_SESSION['config'])){
-	
 	if(file_exists($file)){
 		$_SESSION['config']=parse_ini_file($file,true);
 	}

@@ -3,6 +3,7 @@ session_start();
 
 include_once("config/config.php");
 include_once(APP_MODELS."mainModel.php");
+die('holaaa');
 include_once(APP_BUSINESS."mainBusiness.php");
 include_once(APP_CONTROLLERS."mainController.php");
 include_once(APP_TEMPLATE."mainTemplate.php");
