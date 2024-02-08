@@ -18,12 +18,12 @@ $metodo = isset($_REQUEST['metodo']) ? $_REQUEST['metodo'] : '';
 $token = isset($_REQUEST['token']) ? $_REQUEST['token'] : '';
 $parametros = isset($_REQUEST['parametros']) ? $_REQUEST['parametros'] : '';
 $user = isset($_REQUEST['user']) ? $_REQUEST['user'] : '';
-
+die('holaaaa');
 include_once MODULE_PATH."1/programa/modelo.php";
 include_once MODULE_PATH."1/login/negocio.php";
 include_once MODULE_PATH."1/login/modelo.php";
 
-die('holaaaa');
+
 
 $mPrograma = new programaModel($modulo);
 $menu = $mPrograma->menu;
