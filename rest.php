@@ -10,8 +10,9 @@ include_once(APP_TEMPLATE."mainTemplate.php");
 
 // Sanitizar parámetros GET
 $Core = new mainController();
-$_REQUEST = $Core->sanitize($_REQUEST);
 die('holaaaa');
+$_REQUEST = $Core->sanitize($_REQUEST);
+
 $tipo = isset($_REQUEST['tipo']) ? $_REQUEST['tipo'] : '';
 $modulo = isset($_REQUEST['modulo']) ? $_REQUEST['modulo'] : '';
 $metodo = isset($_REQUEST['metodo']) ? $_REQUEST['metodo'] : '';
