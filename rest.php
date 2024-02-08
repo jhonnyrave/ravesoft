@@ -6,7 +6,7 @@ include_once(APP_MODELS."mainModel.php");
 include_once(APP_BUSINESS."mainBusiness.php");
 include_once(APP_CONTROLLERS."mainController.php");
 include_once(APP_TEMPLATE."mainTemplate.php");
-die('holaaaa');
+
 
 // Sanitizar parámetros GET
 $Core = new mainController();
@@ -22,6 +22,8 @@ $user = isset($_REQUEST['user']) ? $_REQUEST['user'] : '';
 include_once MODULE_PATH."1/programa/modelo.php";
 include_once MODULE_PATH."1/login/negocio.php";
 include_once MODULE_PATH."1/login/modelo.php";
+
+die('holaaaa');
 
 $mPrograma = new programaModel($modulo);
 $menu = $mPrograma->menu;
