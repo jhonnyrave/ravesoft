@@ -48,7 +48,10 @@ abstract class mainModel
         
         $this->conexion = new DatabaseConfig();
         if ($conexion_ != '') {
+           
             $file = CORE . trim($conexion_) . ".ini";
+            var_dump($file);
+            die;
             $this->loadConfigFromIni($file);
         } elseif ($this->conexion->host == '') {
             $config = $_SESSION['config']['database'];
