@@ -10,6 +10,8 @@ include_once(APP_TEMPLATE."mainTemplate.php");
 
 // Sanitizar parámetros GET
 $Core = new mainController();
+var_dump($_REQUEST);
+die;
 $_REQUEST = $Core->sanitize($_REQUEST);
 die('holaaa');
 $tipo = isset($_REQUEST['tipo']) ? $_REQUEST['tipo'] : '';
