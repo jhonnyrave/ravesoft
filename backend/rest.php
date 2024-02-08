@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include_once("config/config.php");
+include_once("./config.php");
 include_once(APP_MODELS."mainModel.php");
 include_once(APP_BUSINESS."mainBusiness.php");
 include_once(APP_CONTROLLERS."mainController.php");
@@ -9,7 +9,6 @@ include_once(APP_TEMPLATE."mainTemplate.php");
 
 // Sanitizar parámetros GET
 $Core = new mainController();
-
 $_REQUEST = $Core->sanitize($_REQUEST);
 $tipo = isset($_REQUEST['tipo']) ? $_REQUEST['tipo'] : '';
 $modulo = isset($_REQUEST['modulo']) ? $_REQUEST['modulo'] : '';
