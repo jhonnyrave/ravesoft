@@ -1,6 +1,6 @@
 <?php
 session_start();
-die('holaaa');
+
 include_once("config/config.php");
 include_once(APP_MODELS."mainModel.php");
 include_once(APP_BUSINESS."mainBusiness.php");
