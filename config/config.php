@@ -1,7 +1,7 @@
 <?php
 
 date_default_timezone_set('America/Bogota');
-define('ROOT_PATH',	".");
+define('ROOT_PATH',	"..");
 define('MODULE_PATH',	ROOT_PATH.'/modules/');
 define('STATIC_PATH',	ROOT_PATH.'/public/static/');
 define('APP_PATH',	ROOT_PATH.'/app/');
@@ -20,7 +20,6 @@ define("PATH_RAIZ",$path_raiz);
 define("PATH_DIRECTORIO",PATH_RAIZ.DIRECTORIO);
 
 $file=CORE.$_SERVER['SERVER_NAME'].".ini";
-die($_SERVER['SERVER_NAME']);
 if(!isset($_SESSION['config'])){
 	
 	if(file_exists($file)){
