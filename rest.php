@@ -6,7 +6,7 @@ include_once(APP_MODELS."mainModel.php");
 include_once(APP_BUSINESS."mainBusiness.php");
 include_once(APP_CONTROLLERS."mainController.php");
 include_once(APP_TEMPLATE."mainTemplate.php");
-
+die('holaaaa');
 
 // Sanitizar parámetros GET
 $Core = new mainController();
