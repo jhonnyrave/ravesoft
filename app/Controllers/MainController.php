@@ -167,8 +167,6 @@ class mainController {
 
 
 	public function sanitize($parametros){
-        var_dump($parametros);
-        die('estut');
 		if(isset($_POST['sanitize'])){
 			$sanitize=$_POST['sanitize'];
 			foreach ($sanitize as $key => $tipo) {
