@@ -20,7 +20,7 @@ define("PATH_RAIZ",$path_raiz);
 define("PATH_DIRECTORIO",PATH_RAIZ.DIRECTORIO);
 
 $file=CORE.$_SERVER['SERVER_NAME'].".ini";
-die('esriy');
+die($file);
 if(!isset($_SESSION['config'])){
 	
 	if(file_exists($file)){
