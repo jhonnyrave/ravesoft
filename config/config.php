@@ -1,7 +1,7 @@
 <?php
 
 date_default_timezone_set('America/Bogota');
-define('ROOT_PATH',	"..");
+define('ROOT_PATH',	"./backend");
 define('MODULE_PATH',	ROOT_PATH.'/modules/');
 define('STATIC_PATH',	ROOT_PATH.'/public/static/');
 define('APP_PATH',	ROOT_PATH.'/app/');
