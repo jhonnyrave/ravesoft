@@ -7,10 +7,11 @@ include_once(APP_BUSINESS."mainBusiness.php");
 include_once(APP_CONTROLLERS."mainController.php");
 include_once(APP_TEMPLATE."mainTemplate.php");
 
-
+var_dump(APP_CONTROLLERS);
+die;
 // Sanitizar parámetros GET
 $Core = new mainController();
-var_dump($_REQUEST);
+var_dump(APP_CONTROLLERS);
 die;
 $_REQUEST = $Core->sanitize($_REQUEST);
 die('holaaa');
