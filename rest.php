@@ -6,13 +6,12 @@ include_once(APP_MODELS."mainModel.php");
 include_once(APP_BUSINESS."mainBusiness.php");
 include_once(APP_CONTROLLERS."mainController.php");
 include_once(APP_TEMPLATE."mainTemplate.php");
-die('holaaa');
+
 
 // Sanitizar parámetros GET
 $Core = new mainController();
-
 $_REQUEST = $Core->sanitize($_REQUEST);
-
+die('holaaa');
 $tipo = isset($_REQUEST['tipo']) ? $_REQUEST['tipo'] : '';
 $modulo = isset($_REQUEST['modulo']) ? $_REQUEST['modulo'] : '';
 $metodo = isset($_REQUEST['metodo']) ? $_REQUEST['metodo'] : '';
