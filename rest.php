@@ -2,8 +2,9 @@
 session_start();
 
 include_once("config/config.php");
-include_once(APP_MODELS."mainModel.php");
 die('holaaaa');
+include_once(APP_MODELS."mainModel.php");
+
 include_once(APP_BUSINESS."mainBusiness.php");
 include_once(APP_CONTROLLERS."mainController.php");
 include_once(APP_TEMPLATE."mainTemplate.php");
