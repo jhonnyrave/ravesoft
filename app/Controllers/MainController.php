@@ -9,6 +9,7 @@ class mainController {
 
     public function __construct($medio = "servicio")
     {
+        die('controller');
         if ($medio === '') $medio = 'servicio';
         $this->tiempoDebug = microtime(true);
         $this->medio = $medio;
