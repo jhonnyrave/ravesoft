@@ -7,14 +7,10 @@ include_once(APP_BUSINESS."mainBusiness.php");
 include_once(APP_CONTROLLERS."mainController.php");
 include_once(APP_TEMPLATE."mainTemplate.php");
 
-var_dump(APP_CONTROLLERS);
-die;
 // Sanitizar parámetros GET
 $Core = new mainController();
-var_dump(APP_CONTROLLERS);
-die;
+
 $_REQUEST = $Core->sanitize($_REQUEST);
-die('holaaa');
 $tipo = isset($_REQUEST['tipo']) ? $_REQUEST['tipo'] : '';
 $modulo = isset($_REQUEST['modulo']) ? $_REQUEST['modulo'] : '';
 $metodo = isset($_REQUEST['metodo']) ? $_REQUEST['metodo'] : '';
@@ -25,8 +21,6 @@ $user = isset($_REQUEST['user']) ? $_REQUEST['user'] : '';
 include_once MODULE_PATH."1/programa/modelo.php";
 include_once MODULE_PATH."1/login/negocio.php";
 include_once MODULE_PATH."1/login/modelo.php";
-
-
 
 $mPrograma = new programaModel($modulo);
 $menu = $mPrograma->menu;
